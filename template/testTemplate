@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>{{.Head.Title}}</title>
+	</head>
+	<body>
+		
+		{{with .Body}}
+		       {{range .}}
+		       		
+		       <div>
+				<h1>
+					{{.Heading}}	
+		       		</h1>
+				<p>
+					{{.Content}}
+				</p>
+		       </div>
+		       {{end}}
+		{{end}}
+	</body>
+</html>
+
