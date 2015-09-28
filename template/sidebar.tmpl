@@ -1,0 +1,11 @@
+{{define "sidebar"}}
+	<div class="sidebar">
+		<ul>
+		{{range .}}
+			<li><a href="{{.Link}}">{{.Label}}</a></li>
+		
+		{{end}}
+		</ul>
+		
+	</div>
+{{end}}

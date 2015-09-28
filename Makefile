@@ -5,10 +5,12 @@ DEPENDENCIES :=
 
 all: install
 
-install: deps build release
-	go install main.go
+install: deps clean build
+	#go build -gcflags "-N -l" $(GOPATH)/src/github.com/atulmirajkar/atgo/model/model.go
+	#go build -gcflags "-N -l" $(GOPATH)/src/github.com/atulmirajkar/atgo/controller/controller.go	
+	go install -gcflags "-N -l" 
 build:
-	rm -rf $(GOPATH)/src/github.com/atgo
+	#rm -rf $(GOPATH)/src/github.com/atulmirajkar/atgo
 	mkdir -p $(GOPATH)/src/github.com/atulmirajkar/atgo
 	cp -r ./* $(GOPATH)/src/github.com/atulmirajkar/atgo 
 release:

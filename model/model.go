@@ -2,9 +2,13 @@ package model
 
 import (
 	"encoding/json"
-	"fmt"
 	"io/ioutil"
+	"log"
 )
+
+type Model struct {
+	logger *log.Logger
+}
 
 type Header struct {
 	Title string `json:"title"`
@@ -12,28 +16,47 @@ type Header struct {
 
 type BodyParts struct {
 	Heading string `json:"heading"`
-	Content string `jsom:"content"`
+	Content string `json:"content"`
+}
+
+type SidebarLink struct {
+	Label string `json: "label"`
+	Link  string `json: "link"`
+}
+
+type View struct {
+	Page         *Page
+	BaseViewPath string
 }
 
 type Page struct {
-	Head Header      `json:"header"`
-	Body []BodyParts `json:"body"`
+	Head    Header        `json:"header"`
+	Body    []BodyParts   `json:"body"`
+	Sidebar []SidebarLink `json:"sidebar"`
 }
 
-func LoadPage(dataPath string) (*Page, error) {
+func (m *Model) InitializeModel(inputLogger *log.Logger) {
+	m.logger = inputLogger
+}
+
+func (m *Model) LoadPage(dataPath string) (*View, error) {
 	dataPath = "./view/data/" + dataPath + ".json"
 	file, err := ioutil.ReadFile(dataPath)
 	if err != nil {
-		fmt.Println("File error: %v\n", err)
+		m.logger.Println("File error: %v\n", err)
 		return nil, err
 	}
 
-	fmt.Println(string(file))
 	//unmarshall the json file
 	var page Page
 	if e := json.Unmarshal(file, &page); e != nil {
-		fmt.Println("Unmarshal error: %s\n", err)
+		m.logger.Println("Unmarshal error: %s\n", err)
 		return nil, e
 	}
-	return &page, nil
+
+	return &View{Page: &page}, nil
+}
+
+func (p *Page) getAbsLink(inputLink string) {
+
 }

@@ -4,12 +4,22 @@
     },
     "body":[
 	{
-	    "heading":"heading1",
-	    "content":"content1"
+	    "heading":"About Me",
+	    "content":"<p>My name is Atul Mirajkar. I have served as a software developer for two years (July 2011 - July 2013) in Geometric Limited. Currently I am pursuing Masters in Computer Science at University of Maryland Baltimore County. As part of my research I am currently exploring machine learning techniques to improve robot simulations using crowd sourced data.</p><p>Some of the problems being continuously tackled in IT industry and most of which I have encountered are related to that of computation of exponentially increasing data. Research programs in the fields of Distributed computing, Algorithm analysis, Machine Learning are continuously being carried out to tackle the ever increasing need of computation efficiency and speed. With this need in mind my future goal is to pursue a career in IT industry and aim towards computation on big data.</p><p>I am looking for co-op/full time opportunities as a software developer, and I believe that my experience, research and strong technical abilities would help me contribute immensely.</p>"
 	},
 	{
 	    "heading":"heading2",
 	    "content":"content2"
+	}
+    ],
+    "sidebar":[
+	{
+	    "label":"label1",
+	    "link":"test1.html"
+	},
+	{
+	    "label":"label2",
+	    "link":"test2.html"
 	}
     ]
 }
