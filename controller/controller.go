@@ -99,7 +99,7 @@ func homeHandler(w http.ResponseWriter, r *http.Request) {
 
 	//t.ExecuteTemplate(os.Stdout, "header", view)
 	//t.ExecuteTemplate(os.Stdout, "sidebar", view.Page.Sidebar)
-	t.ExecuteTemplate(os.Stdout, "content", view)
+	//t.ExecuteTemplate(os.Stdout, "content", view)
 	if err = t.Execute(w, view); err != nil {
 		controllerObj.logger.Println("template executing  err %s\n", err)
 		return
