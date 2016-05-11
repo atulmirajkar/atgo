@@ -1,0 +1,92 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300);
+/*header*/
+html {
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  line-height: 28px;
+  color:#2c3e50;
+  background-color:white;
+}
+
+h1,h2,h3,h4,h5,h6
+{
+  color:#2c3e50
+}
+
+h1{
+  font-weight:400;
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  color:#428bca;
+  font-size: 26px;
+}
+
+h2{
+  font-weight:400;
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  color:#428bca;
+  font-size: 22px;
+}
+
+h1 a,h2 a,h3 a,h4 a
+{
+  color:#428fe0
+}
+
+p{
+  font-weight:200;
+  margin-bottom: 30px;
+}
+.header{
+    margin-left:350px;
+}
+
+/*sidebar*/
+.navbar-fixed-left {
+  width: 350px;
+  position: fixed;
+  border-radius: 0;
+  height: 100%;
+}
+.navbar-fixed-left .navbar-nav > li {
+  float: none;  /* Cancel default li float: left */
+  width: 139px;
+}
+
+.navbar-fixed-left + .container {
+  padding-left: 160px;
+}
+
+/* On using dropdown menu (To right shift popuped) */
+.navbar-fixed-left .navbar-nav > li > .dropdown-menu {
+  margin-top: -50px;
+  margin-left: 140px;
+}
+
+/*.sidebarLink{
+
+
+}
+.sidebar li{
+    list-style:none;
+    line-height:200%;
+    text-align: left;
+}
+.sidebar a{
+    text-decoration:none;
+    color: #fff;
+}*/
+
+/*content*/
+.content {
+    margin-left:350px;
+}
+
+.individualContent{
+    text-align:left;
+    width: 90%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.individualContent>h1{
+    text-align:center;
+}

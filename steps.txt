@@ -1,0 +1,14 @@
+//always make from work_life
+//make takes care of moving and installing files to $GOPATH
+//to release clean move and install
+//make rcmi
+//use individual make commands to take specific steps
+
+//debugging
+dlv debug main.go
+b main.go:8
+
+//attaching to running process
+dlv attach pid
+
+//the exec looks for files in $GOPATH directory

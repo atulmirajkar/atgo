@@ -1,11 +1,19 @@
 {{define "sidebar"}}
-	<div class="sidebar">
-		<ul>
-		{{range .}}
-			<li><a href="{{.Link}}">{{.Label}}</a></li>
-		
-		{{end}}
+
+<nav class="navbar">
+	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#siteNavBar">
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="siteNavBar">
+		<ul class="sidebar-nav nav nav-pills nav-stacked">
+			{{range .}}
+				<li><a href="{{.Link}}">{{.Label}}</a></li>
+				 <li class="divider"></li>
+			{{end}}
 		</ul>
-		
+
 	</div>
+</nav>
 {{end}}

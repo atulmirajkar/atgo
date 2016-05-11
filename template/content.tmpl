@@ -1,17 +1,20 @@
 {{define "content"}}
     {{with .Page.Body}}
-    <div class="content">
-    {{range .}}
-    
-    <div class="individualContent">
-      <h1>
-	{{.Heading}}	
-      </h1>
-      <p>
-	{{.Content}}
-      </p>
-    </div>
-    {{end}}
-    </div>
+        <div class="row content">
+
+            {{range .}}
+
+              <div id={{.Heading | ConvertToId}} class="">
+                  <h1>
+	                     {{.Heading}}
+                  </h1>
+                  <p>
+	                   {{.Content}}
+                  </p>
+              </div>
+
+              {{end}}
+
+            </div>
     {{end}}
 {{end}}
